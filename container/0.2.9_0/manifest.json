@@ -1,0 +1,67 @@
+{
+   "author": "哩呵",
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "logo/logo_128.png",
+         "16": "logo/logo_16.png",
+         "48": "logo/logo_48.png"
+      },
+      "default_popup": "/one/popup/popup.html",
+      "default_title": "集装箱"
+   },
+   "commands": {
+      "command-auto-update": {
+         "description": "自动更新应用",
+         "suggested_key": {
+            "default": "Alt+Shift+1",
+            "mac": "Command+Shift+1"
+         }
+      },
+      "command-install-all": {
+         "description": "安装所有应用",
+         "suggested_key": {
+            "default": "Alt+Shift+2",
+            "mac": "Command+Shift+2"
+         }
+      },
+      "command-update-all": {
+         "description": "更新所有应用",
+         "suggested_key": {
+            "default": "Alt+Shift+3",
+            "mac": "Command+Shift+3"
+         }
+      },
+      "toggle-proxy-status": {
+         "description": "切换代理状态",
+         "suggested_key": {
+            "default": "Alt+Shift+4",
+            "mac": "Command+Shift+4"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "/js/register.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "zh_CN",
+   "description": "一个插件，提供一揽子服务。",
+   "homepage_url": "http://go.newday.me/s/one-home",
+   "icons": {
+      "128": "logo/logo_128.png",
+      "16": "logo/logo_16.png",
+      "48": "logo/logo_48.png",
+      "96": "logo/logo_96.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoTytXAwI4eHR2imR2c6QIo3M8mAayP6wMeESZtx9fNMVp/6XZUcAfBLQoZMkxVOYW0xOl4pVXtFqCJ5VjYQ+bO7pfmf2k1vbwZcDU3X8L8Lw4zwawE2n3AGplrcX2a+MUlUpqkSbTOafXIU+7LQOWbFJH0a4Iwn6/lqwUu3CTWsYwXT1l5Rns7xsV39iVy9LWWMVjGBDPr62XNc3RaoqIM9jWe7ysuTeA2xf1lTI5tSr58rJFIZyTPe6bFWZaC1+Uw8TGROsYd6TIXEB1Si4ETpUWZ2gYwZQMaDE+vKsXq3FxHfXaCxM9CM+JnheS1NgxxmMvvRY/0UVZjW+saHGHQIDAQAB",
+   "manifest_version": 2,
+   "name": "集装箱",
+   "options_page": "/one/store/manage.html",
+   "permissions": [ "\u003Call_urls>", "storage", "unlimitedStorage", "proxy", "cookies", "commands", "downloads", "notifications", "contextMenus", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.2.9"
+}

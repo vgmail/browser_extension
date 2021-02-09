@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="380" height="216" viewBox="0 0 380 216">
+    <defs>
+        <linearGradient id="a" x1="100%" x2="0%" y1="34.466%" y2="66.155%">
+            <stop offset="0%" stop-color="#624FC8"/>
+            <stop offset="100%" stop-color="#332797"/>
+        </linearGradient>
+        <path id="b" d="M5.071 0l5.094 5.218-5.071 4.97L0 4.97z"/>
+        <path id="d" d="M5.071 0l5.094 5.218-5.071 4.97L0 4.97z"/>
+        <path id="f" d="M5.071 0l5.094 5.218-5.071 4.97L0 4.97z"/>
+        <path id="h" d="M.011 2.85l5.67-1.429C61.815.713 66.913.122 80.735.438 86.23.564 98.62 5.965 104.114 6.19c2.163.089 4.327.184 6.486.355.91.072 1.883.127 2.778.34-4.106 1.983-24.653 15.768-28.695 17.89-6.241 3.274-27.989 17.624-30.262 16.593C46.186 37.633 12.035 12.21.011 2.85z"/>
+        <linearGradient id="i" x1="24.585%" x2="24.585%" y1="70.964%" y2="170.964%">
+            <stop offset="0%" stop-color="#338EE6"/>
+            <stop offset="100%" stop-color="#8DC1F4"/>
+        </linearGradient>
+        <path id="k" d="M.011 2.85l5.67-1.429C61.815.713 66.913.122 80.735.438 86.23.564 98.62 5.965 104.114 6.19c2.163.089 4.327.184 6.486.355.91.072 1.883.127 2.778.34-4.106 1.983-24.653 15.768-28.695 17.89-6.241 3.274-27.989 17.624-30.262 16.593C46.186 37.633 12.035 12.21.011 2.85z"/>
+        <linearGradient id="l" x1="34.791%" x2="35.338%" y1="64.674%" y2="61.649%">
+            <stop offset="0%" stop-color="#338EE6"/>
+            <stop offset="100%" stop-color="#8DC1F4"/>
+        </linearGradient>
+        <path id="n" d="M19.517 35.11C24.438 27.19 45.855 4.417 52.678.074 55.065-1.447 79.916 21.2 86.51 29.578c29.237 37.145 29.75 39.649 29.536 39.806-7.48 5.463-44.414-3.06-47.512-3.313-20.466-1.665-30.873 1.426-51.308-.117-7.452-.563-16.92.566-17.215.093.211-6.672 13.47-21.22 19.506-30.936z"/>
+        <path id="p" d="M25.035.688l38.903 12.165c2.56.8 4.657 1.515 4.006 3.764L48.66 83.089c-.652 2.249-3.255 3.423-5.815 2.622L3.944 73.546c-2.56-.8-4.108-3.273-3.457-5.522L20.345 1.822c.651-2.249 2.13-1.934 4.69-1.134z"/>
+        <path id="r" d="M2.237.143S2.74-.147 3.52.3c.896.474 24.79 19.234 38.047 28.379 5.098 3.517 10.255 7.387 15.88 10.014 2.294 1.032 24.66-12.64 30.553-16.608 28.998-19.53 29.34-17.87 29.666-17.705-1.023 57.814 3.821 68.03.516 71.964C115.077 80.044 1.701 79.36.675 77.5c-.956-1.735-.357-59.167.8-76.5l.762-.856z"/>
+        <linearGradient id="s" x1="24.402%" x2="24.402%" y1="71.103%" y2="171.103%">
+            <stop offset="0%" stop-color="#8DC1F5"/>
+            <stop offset="100%" stop-color="#B1D8FF"/>
+        </linearGradient>
+        <path id="u" d="M2.237.143S2.74-.147 3.52.3c.896.474 24.79 19.234 38.047 28.379 5.098 3.517 10.255 7.387 15.88 10.014 2.294 1.032 24.66-12.64 30.553-16.608 28.998-19.53 29.34-17.87 29.666-17.705-1.023 57.814 3.821 68.03.516 71.964C115.077 80.044 1.701 79.36.675 77.5c-.956-1.735-.357-59.167.8-76.5l.762-.856z"/>
+        <linearGradient id="v" x1="35.462%" x2="35.462%" y1="88.302%" y2="81.472%">
+            <stop offset="0%" stop-color="#8DC1F5"/>
+            <stop offset="100%" stop-color="#B1D8FF"/>
+        </linearGradient>
+        <path id="x" d="M3.878 0l3.895 3.99-3.878 3.801L0 3.801z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="url(#a)" fill-rule="nonzero" d="M8 0h364a8 8 0 0 1 8 8v208H0V8a8 8 0 0 1 8-8z"/>
+        <g transform="translate(86 124)">
+            <mask id="c" fill="#fff">
+                <use xlink:href="#b"/>
+            </mask>
+            <path fill="#FFF" d="M-2.99 13.185h16.145V-2.997H-2.99z" mask="url(#c)"/>
+        </g>
+        <g transform="translate(100.536 61.199)">
+            <mask id="e" fill="#fff">
+                <use xlink:href="#d"/>
+            </mask>
+            <path fill="#B1D8FF" d="M-2.99 13.185h16.145V-2.997H-2.99z" mask="url(#e)"/>
+        </g>
+        <g transform="translate(244.928 46.524)">
+            <mask id="g" fill="#fff">
+                <use xlink:href="#f"/>
+            </mask>
+            <use fill="#FFAC00" xlink:href="#f"/>
+            <path fill="#FFC100" d="M-2.99 13.185h16.145V-2.997H-2.99z" mask="url(#g)"/>
+        </g>
+        <g transform="translate(131.56 99.867)">
+            <mask id="j" fill="#fff">
+                <use xlink:href="#h"/>
+            </mask>
+            <path fill="url(#i)" d="M-184.061 156.002h748.723V-380.06h-748.723z" mask="url(#j)"/>
+        </g>
+        <g transform="translate(131.56 99.867)">
+            <mask id="m" fill="#fff">
+                <use xlink:href="#k"/>
+            </mask>
+            <path fill="url(#l)" d="M-184.061 156.002h748.723V-380.06h-748.723z" mask="url(#m)"/>
+        </g>
+        <g transform="translate(131.56 36)">
+            <mask id="o" fill="#fff">
+                <use xlink:href="#n"/>
+            </mask>
+            <path fill="#99CBFE" d="M-2.588 73.826H118.67V-2.617H-2.588z" mask="url(#o)"/>
+        </g>
+        <g transform="translate(148.198 71.598)">
+            <mask id="q" fill="#fff">
+                <use xlink:href="#p"/>
+            </mask>
+            <path fill="#FFF" d="M-2.262 88.58h72.925V-2.527H-2.262z" mask="url(#q)"/>
+        </g>
+        <g transform="translate(130 100.914)">
+            <mask id="t" fill="#fff">
+                <use xlink:href="#r"/>
+            </mask>
+            <path fill="url(#s)" d="M-182.501 154.955H566.22v-536.062H-182.5z" mask="url(#t)"/>
+        </g>
+        <g transform="translate(130 100.914)">
+            <mask id="w" fill="#fff">
+                <use xlink:href="#u"/>
+            </mask>
+            <path fill="url(#v)" d="M-182.501 154.955H566.22v-536.062H-182.5z" mask="url(#w)"/>
+        </g>
+        <g stroke-linecap="round" stroke-linejoin="round" stroke-width=".882">
+            <path stroke="#8EC1F5" d="M191.2 142.78c12.486 8.915 25.739 16.912 39.057 24.501 5.264 3 10.996 5.183 16.153 8.355M182.365 142.78c-11.514 7.55-24.177 13.323-35.345 21.491-4.66 3.41-9.626 7.274-14.713 9.872"/>
+            <path stroke="#B1D8FF" d="M139.669 97.101c6.493-9.15 19.494-27.264 32.543-42.41 3.954-4.588 11.556-13.881 13.92-13.45 2.137.391 9.723 7.301 12.137 9.814 14.093 14.67 28.261 32.153 41.516 49.91"/>
+        </g>
+        <g transform="translate(273.629 121.884)">
+            <use fill="#FFC100" xlink:href="#x"/>
+        </g>
+    </g>
+</svg>

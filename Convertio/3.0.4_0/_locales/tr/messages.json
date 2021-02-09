@@ -1,0 +1,35 @@
+{
+   "appDefaultTitle": {
+      "message": "Dosya Dönüştürücü"
+   },
+   "appDesc": {
+      "message": "Dosyaların biçimini bir diğerine çevrimiçi olarak dönüştürün. 2500'den fazla dönüşüm destekli."
+   },
+   "labelArchiveConverter": {
+      "message": "Arşiv Dönüştürücü"
+   },
+   "labelAudioConverter": {
+      "message": "Ses Dönüştürücü"
+   },
+   "labelDocumentConverter": {
+      "message": "Belge Dönüştürücü"
+   },
+   "labelEBookConverter": {
+      "message": "Ebook Dönüştürücü"
+   },
+   "labelFontConverter": {
+      "message": "Font Dönüştürücü"
+   },
+   "labelImageConverter": {
+      "message": "Görüntü Dönüştürücü"
+   },
+   "labelPresentationConverter": {
+      "message": "Sunum Dönüştürücü"
+   },
+   "labelRecognizeText": {
+      "message": "Metin Tanımlama"
+   },
+   "labelVideoConverter": {
+      "message": "Video Dönüştürücü"
+   }
+}

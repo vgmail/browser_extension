@@ -1,0 +1,35 @@
+{
+   "appDefaultTitle": {
+      "message": "File Converter"
+   },
+   "appDesc": {
+      "message": "Converteer online bestanden van het ene formaat naar het andere. Meer dan 2500 verschillende conversies ondersteund."
+   },
+   "labelArchiveConverter": {
+      "message": "Archiefomzetter"
+   },
+   "labelAudioConverter": {
+      "message": "Audio-omzetter"
+   },
+   "labelDocumentConverter": {
+      "message": "Documentomzetter"
+   },
+   "labelEBookConverter": {
+      "message": "Ebook-omzetter"
+   },
+   "labelFontConverter": {
+      "message": "Lettertypeconvertor"
+   },
+   "labelImageConverter": {
+      "message": "Afbeeldingomzetter"
+   },
+   "labelPresentationConverter": {
+      "message": "Presentatieomzetter"
+   },
+   "labelRecognizeText": {
+      "message": "Tekst herkennen"
+   },
+   "labelVideoConverter": {
+      "message": "Video-omzetter"
+   }
+}

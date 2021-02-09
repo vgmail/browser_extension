@@ -1,0 +1,81 @@
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+:root {
+    scrollbar-width: none;
+}
+
+body {
+    min-width: 400px;
+    min-height: 500px;
+}
+
+.navbar-brand .brand-text {
+    font-size: 1.1rem;
+}
+
+.content .container {
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
+
+.card {
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    padding: 0.5rem 1rem;
+}
+
+.card-title {
+    line-height: inherit;
+    font-size: 1rem;
+}
+
+.modal {
+    top: 100px;
+}
+
+.table-middle {
+    font-size: 0.9rem;
+}
+
+.products-list .product-info {
+    font-size: 0.9rem;
+    margin-left: 66px;
+}
+
+.products-list .product-title {
+    font-size: 0.9rem;
+}
+
+.products-list .product-img {
+    padding: 5px;
+}
+
+.products-list .product-action {
+    margin-top: 0.15rem;
+    margin-right: 0.5rem;
+}
+
+.products-list .product-action .app-status {
+    width: 2rem;
+    height: 31px;
+    padding-left: .25rem;
+    background: #03a9f4;
+}
+
+.products-list .product-img img {
+    width: 52px;
+    height: 52px;
+}
+
+.main-footer {
+    font-size: 0.8rem;
+    padding: 0.8rem;
+}
+
+.dropdown-menu {
+    min-width: auto;
+}

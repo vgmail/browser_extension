@@ -1,0 +1,35 @@
+{
+   "appDefaultTitle": {
+      "message": "파일 변환기"
+   },
+   "appDesc": {
+      "message": "온라인으로 파일을 한 포맷에서 다른 포맷으로 변환해 보세요. 2500개 이상의 다양한 전환이 제공됩니다."
+   },
+   "labelArchiveConverter": {
+      "message": "압축파일 변환 프로그램"
+   },
+   "labelAudioConverter": {
+      "message": "오디오 변환 프로그램"
+   },
+   "labelDocumentConverter": {
+      "message": "문서 변환 프로그램"
+   },
+   "labelEBookConverter": {
+      "message": "전자책 변환 프로그램"
+   },
+   "labelFontConverter": {
+      "message": "폰트 변환기"
+   },
+   "labelImageConverter": {
+      "message": "이미지 파일 변환 프로그램"
+   },
+   "labelPresentationConverter": {
+      "message": "프리젠테이션 변환 프로그램"
+   },
+   "labelRecognizeText": {
+      "message": "텍스트를 인식"
+   },
+   "labelVideoConverter": {
+      "message": "동영상 변환 프로그램"
+   }
+}

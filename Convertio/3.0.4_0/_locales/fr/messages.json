@@ -1,0 +1,35 @@
+{
+   "appDefaultTitle": {
+      "message": "Convertisseur de fichiers"
+   },
+   "appDesc": {
+      "message": "Convertissez des fichiers en ligne d'un format à un autre. Plus de 2 500 conversions différentes prises en charge."
+   },
+   "labelArchiveConverter": {
+      "message": "Convertisseur de fichiers d'archive"
+   },
+   "labelAudioConverter": {
+      "message": "Convertisseur de fichiers audio"
+   },
+   "labelDocumentConverter": {
+      "message": "Convertisseur de documents"
+   },
+   "labelEBookConverter": {
+      "message": "Convertisseur d'ebook"
+   },
+   "labelFontConverter": {
+      "message": "Convertisseur de police"
+   },
+   "labelImageConverter": {
+      "message": "Convertisseur de fichiers image"
+   },
+   "labelPresentationConverter": {
+      "message": "Convertisseur de fichiers de présentation"
+   },
+   "labelRecognizeText": {
+      "message": "Reconnaître du texte"
+   },
+   "labelVideoConverter": {
+      "message": "Convertisseur de fichiers vidéo"
+   }
+}

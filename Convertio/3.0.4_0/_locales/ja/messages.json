@@ -1,0 +1,35 @@
+{
+   "appDefaultTitle": {
+      "message": "ファイルコンバーター"
+   },
+   "appDesc": {
+      "message": "ファイルをオンラインで別のフォーマットへと変換. 2500以上の異なる変換がサポートされています。"
+   },
+   "labelArchiveConverter": {
+      "message": "アーカイブコンバーター"
+   },
+   "labelAudioConverter": {
+      "message": "オーディオコンバーター"
+   },
+   "labelDocumentConverter": {
+      "message": "ドキュメントコンバーター"
+   },
+   "labelEBookConverter": {
+      "message": "Eブックコンバーター"
+   },
+   "labelFontConverter": {
+      "message": "フォントコンバーター"
+   },
+   "labelImageConverter": {
+      "message": "画像コンバーター"
+   },
+   "labelPresentationConverter": {
+      "message": "プレゼンテーションコンバーター"
+   },
+   "labelRecognizeText": {
+      "message": "テキスト認識"
+   },
+   "labelVideoConverter": {
+      "message": "ビデオコンバーター"
+   }
+}

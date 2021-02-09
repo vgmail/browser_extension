@@ -1,0 +1,58 @@
+﻿This add-on contains the following third-party libraries.
+
+* lodash.min.js
+https://github.com/jashkenas/underscore/blob/1.10.2/underscore-min.js
+
+* jquery.min.js
+https://github.com/jquery/jquery/blob/3.3.1/dist/jquery.min.js
+
+* bootstrap.bundle.min.js
+https://github.com/twbs/bootstrap/blob/v4.4.1/dist/js/bootstrap.bundle.min.js
+
+* adminlte.min.js
+https://github.com/ColorlibHQ/AdminLTE/blob/v3.0.2/dist/js/adminlte.min.js
+
+* toastr.min.js
+https://github.com/CodeSeven/toastr/blob/2.1.1/build/toastr.min.js
+
+* OverlayScrollbars.min.js
+https://github.com/KingSora/OverlayScrollbars/blob/v1.11.0/js/OverlayScrollbars.min.js
+
+* crypto-js.js
+https://github.com/brix/crypto-js/blob/4.0.0/crypto-js.js
+
+* snap.svg.min.js
+https://github.com/adobe-webplatform/Snap.svg/blob/v0.5.1/dist/snap.svg-min.js
+
+* vue-csp.min.js
+https://github.com/vuejs/vue/blob/1.0-csp/dist/vue.min.js
+
+* jqColorPicker.min.js
+https://github.com/PitPik/tinyColorPicker/blob/1.1.1/jqColorPicker.min.js
+
+* moment.min.js
+https://github.com/moment/moment/blob/2.27.0/min/moment-with-locales.min.js
+
+* daterangepicker.min.js
+https://github.com/dangrossman/daterangepicker/blob/v3.1/daterangepicker.js
+
+* dropzone.min.js
+https://github.com/enyo/dropzone/blob/v5.7.2/dist/min/dropzone.min.js
+
+*jquery-qrcode.min.js
+https://github.com/lrsjng/jquery-qrcode/blob/v0.17.0/dist/jquery-qrcode.min.js
+
+* qrcode-decoder.js
+https://github.com/yugasun/qrcode-decoder/blob/0.1.2/demo/index.aio.min.js
+
+* FileSaver.min.js
+https://github.com/eligrey/FileSaver.js/blob/v2.0.2/dist/FileSaver.min.js
+
+* jsonlint.js
+https://github.com/zaach/jsonlint/blob/v1.6.0/lib/jsonlint.js
+
+* codemirror
+https://github.com/codemirror/CodeMirror/tree/5.52.2
+https://github.com/codemirror/CodeMirror/blob/5.52.2/mode/javascript/javascript.js
+https://github.com/codemirror/CodeMirror/blob/5.52.2/addon/lint/lint.js
+https://github.com/codemirror/CodeMirror/blob/5.52.2/addon/lint/json-lint.js

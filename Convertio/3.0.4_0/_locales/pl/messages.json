@@ -1,0 +1,35 @@
+{
+   "appDefaultTitle": {
+      "message": "Konwerter Plików"
+   },
+   "appDesc": {
+      "message": "Konwertuj pliki z jednego formatu w inny. Wsparcie dla ponad 2500 różnych konwersji."
+   },
+   "labelArchiveConverter": {
+      "message": "Konwerter archiwum"
+   },
+   "labelAudioConverter": {
+      "message": "Konwerter audio"
+   },
+   "labelDocumentConverter": {
+      "message": "Konwerter dokumentów"
+   },
+   "labelEBookConverter": {
+      "message": "Konwerter e-booków"
+   },
+   "labelFontConverter": {
+      "message": "Konwerter czcionek"
+   },
+   "labelImageConverter": {
+      "message": "Konwerter obrazów"
+   },
+   "labelPresentationConverter": {
+      "message": "Konwerter prezentacji"
+   },
+   "labelRecognizeText": {
+      "message": "Rozpoznaj tekst"
+   },
+   "labelVideoConverter": {
+      "message": "Konwerter wideo"
+   }
+}

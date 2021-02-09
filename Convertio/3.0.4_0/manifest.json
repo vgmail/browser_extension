@@ -1,0 +1,25 @@
+{
+   "browser_action": {
+      "default_icon": {
+         "128": "images/icons/convertio-128x128.png",
+         "16": "images/icons/convertio-16x16.png",
+         "32": "images/icons/convertio-32x32.png",
+         "48": "images/icons/convertio-48x48.png"
+      },
+      "default_popup": "index.html",
+      "default_title": "__MSG_appDefaultTitle__"
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "images/icons/convertio-128x128.png",
+      "16": "images/icons/convertio-16x16.png",
+      "32": "images/icons/convertio-32x32.png",
+      "48": "images/icons/convertio-48x48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp2mOT/HcwRj8YD09DboPvRgmhBVwJ+sF2+WcAcgDyiw60ObqxSIK/2tbmuRFmvFRQ4fc0pKSPCf+HEqzRFg3ntrf6TE/4Wi/aSVweTRkY3rogq+rWAwC4krC+yRzyKojG2Z9jkX9EbBk7I2t4bbIzUtkS7FK92fmN8gWXgQuLsFq+vHEPJ3q/xwU19i/8Zpe+2boqR61+c5IkHM1a0pW/qbojUUkV8nqpfwvTMcgTTy1ubhLwa+wy4VYeFdrUmbOnSBTF3IYyjkXotxdgmWMQQDyFS0ePkVraUu2Qu0wdnxOS7M79z4cmyXeJ12WX1HPWkO+fSpdrhJQp/tMfS5AuwIDAQAB",
+   "manifest_version": 2,
+   "name": "Convertio",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0.4"
+}

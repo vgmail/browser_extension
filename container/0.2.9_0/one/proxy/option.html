@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>集装箱</title>
+    <!-- Meta -->
+    <meta name="referrer" content="never">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/third/font-awesome/5.13.0/css/all.css">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="/third/toastr.js/2.1.1/toastr.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="/third/overlayscrollbars/1.11.0/OverlayScrollbars.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="/third/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/third/admin-lte/3.0.2/adminlte.min.css">
+    <!-- Codemirror -->
+    <link rel="stylesheet" href="/third/codemirror/5.52.2/codemirror.min.css">
+    <link rel="stylesheet" href="/third/codemirror/5.52.2/lint.min.css">
+    <link rel="stylesheet" href="/third/codemirror/5.52.2/eclipse.min.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="/one/assets/iconfont.css">
+    <link rel="stylesheet" href="/one/assets/ui.css">
+</head>
+
+<body class="layout-top-nav layout-navbar-fixed">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <!-- Navbar -->
+        <template id="addon-navbar">
+            <navbar></navbar>
+        </template>
+        <!-- /.navbar -->
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Main content -->
+            <section class="content">
+                <div class="container">
+
+                    <div class="row" id="addon-manage">
+                        <div class="col-md-12">
+
+                            <div class="card" :class="parseCardClass('proxy-option')">
+                                <div class="card-header">
+                                    <h3 class="card-title">代理设置</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"
+                                            @click="toggleCardOpen('proxy-option')">
+                                            <i class="fas" :class="parseCardIconClass('proxy-option')"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body p-0">
+                                    <div class="m-2 alert alert-warning alert-dismissible">
+                                        <button type="button" class="close" data-dismiss="alert"
+                                            aria-hidden="true">&times;</button>
+                                        <h6><i class="icon fas fa-exclamation-triangle"></i> 温馨提醒</h6>
+                                        先停用代理，再启用代理，能解决绝大部分的代理网站无法访问的问题。
+                                    </div>
+                                    <table class="table table-middle">
+                                        <tbody>
+                                            <tr>
+                                                <td class="td-switch-input">
+                                                    <div class="icheck-primary">
+                                                        <input type="checkbox" id="proxy_status" v-model="proxy_status"
+                                                            @change="syncProxyStatus()">
+                                                        <label for="proxy_status"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="td-switch-title">
+                                                    启用状态
+                                                </td>
+                                                <td>
+                                                    启用之后，插件将试图接管浏览器代理
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td-switch-input">
+                                                    <div class="icheck-primary">
+                                                        <input type="radio" id="store_url" disabled>
+                                                        <label for="store_url"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="td-switch-title">
+                                                    鉴权链接
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control form-control-sm"
+                                                        @change="syncAuthUrl()" v-model="auth_url">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+
+                            <div class="card card-default card-outline">
+                                <div class="card-header d-flex p-0">
+                                    <h3 class="card-title p-3">模式设置</h3>
+                                    <ul class="nav nav-pills ml-auto p-2" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link"
+                                                :class="(!proxy_setting.mode || proxy_setting.mode == 'mode_pac_url') ? 'active' : ''"
+                                                data-toggle="pill" href="#tab_mode_pac_url"
+                                                @click="loadProxySetting('mode_pac_url')">PAC模式</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link"
+                                                :class="(proxy_setting.mode == 'mode_rule_url') ? 'active' : ''"
+                                                data-toggle="pill" href="#tab_mode_rule_url"
+                                                @click="loadProxySetting('mode_rule_url')">智能Rule</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link"
+                                                :class="(proxy_setting.mode == 'mode_rule_list') ? 'active' : ''"
+                                                data-toggle="pill" href="#tab_mode_rule_list"
+                                                @click="loadProxySetting('mode_rule_list')">自定义Rule</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show"
+                                            :class="(!proxy_setting.mode || proxy_setting.mode == 'mode_pac_url') ? 'active' : ''"
+                                            id="tab_mode_pac_url" role="tabpanel">
+                                            <p><strong>PAC地址</strong></p>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder=""
+                                                    v-model="proxy_setting.pac_url">
+                                            </div>
+
+                                            <p><strong>刷新间隔</strong></p>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="默认3600，最小600"
+                                                    v-model="proxy_setting.interval">
+                                            </div>
+
+                                            <p><strong>PAC预览</strong></p>
+                                            <div class="form-group">
+                                                <textarea class="form-control editor-area" disabled
+                                                    id="editor_mode_pac_url" mode="application/javascript"></textarea>
+                                            </div>
+
+                                            <p><strong>使用说明</strong></p>
+                                            <p>PAC模式下，请勾选 <span class="text-danger">允许在隐私窗口运行</span> ，否则插件将没有权限设置代理。
+                                            </p>
+                                        </div>
+
+                                        <div class="tab-pane fade show"
+                                            :class="(proxy_setting.mode == 'mode_rule_url') ? 'active' : ''"
+                                            id="tab_mode_rule_url" role="tabpanel">
+                                            <p><strong>RULE地址</strong></p>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder=""
+                                                    v-model="proxy_setting.rule_url">
+                                            </div>
+
+                                            <p><strong>刷新间隔</strong></p>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="默认3600，最小600"
+                                                    v-model="proxy_setting.interval">
+                                            </div>
+
+                                            <p><strong>RULE预览</strong></p>
+                                            <div class="form-group">
+                                                <textarea class="form-control editor-area" disabled
+                                                    id="editor_mode_rule_url" disabled
+                                                    mode="application/json"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade show"
+                                            :class="(proxy_setting.mode == 'mode_rule_list') ? 'active' : ''"
+                                            id="tab_mode_rule_list" role="tabpanel">
+
+                                            <p><strong>刷新间隔</strong></p>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="默认3600，最小600"
+                                                    v-model="proxy_setting.interval">
+                                            </div>
+
+                                            <p><strong>自定义RULE</strong></p>
+                                            <div class="form-group">
+                                                <textarea class="form-control editor-area" id="editor_mode_rule_list"
+                                                    mode="application/json"></textarea>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary" @click="testProxySetting()">
+                                        <i class="fas fa-play mr-1"></i> 测试
+                                    </button>
+                                    <button type="submit" class="btn btn-sm btn-success ml-4"
+                                        @click="applyProxySetting()">
+                                        <i class="fas fa-save mr-1"></i>应用
+                                    </button>
+                                    <span class="ml-4">{{count_message}}</span>
+                                </div>
+                                <!-- /.card-footer -->
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <template id="addon-login-modal">
+        <login-modal></login-modal>
+    </template>
+
+    <template id="addon-setting-modal">
+        <setting-modal></setting-modal>
+    </template>
+
+    <!-- jQuery -->
+    <script src="/third/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Vue -->
+    <script src="/third/vue/1.0.28/vue-csp.min.js"></script>
+    <!-- Toastr -->
+    <script src="/third/toastr.js/2.1.1/toastr.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="/third/overlayscrollbars/1.11.0/OverlayScrollbars.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/third/twitter-bootstrap/4.4.1/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/third/admin-lte/3.0.2/adminlte.min.js"></script>
+    <!-- Codemirror -->
+    <script src="/third/jsonlint/1.6.0/jsonlint.min.js"></script>
+    <script src="/third/codemirror/5.52.2/codemirror.js"></script>
+    <script src="/third/codemirror/5.52.2/javascript.js"></script>
+    <script src="/third/codemirror/5.52.2/lint.js"></script>
+    <script src="/third/codemirror/5.52.2/json-lint.js"></script>
+    <!-- Custom Script -->
+    <script src="/js/bridge.js"></script>
+    <script src="/one/assets/ui.js"></script>
+    <script src="/one/proxy/option.js"></script>
+</body>
+
+</html>

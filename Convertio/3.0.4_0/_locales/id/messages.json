@@ -1,0 +1,35 @@
+{
+   "appDefaultTitle": {
+      "message": "File Converter"
+   },
+   "appDesc": {
+      "message": "Konversikan berkas secara daring dari satu format ke format lain. Mendukung lebih dari 2.500 macam konversi."
+   },
+   "labelArchiveConverter": {
+      "message": "Konverter Arsip"
+   },
+   "labelAudioConverter": {
+      "message": "Konverter Audio"
+   },
+   "labelDocumentConverter": {
+      "message": "Konverter Dokumen"
+   },
+   "labelEBookConverter": {
+      "message": "Konverter e-Book"
+   },
+   "labelFontConverter": {
+      "message": "Konverter Fon"
+   },
+   "labelImageConverter": {
+      "message": "Konverter Gambar"
+   },
+   "labelPresentationConverter": {
+      "message": "Konverter Presentasi"
+   },
+   "labelRecognizeText": {
+      "message": "Kenali Teks"
+   },
+   "labelVideoConverter": {
+      "message": "Konverter Video"
+   }
+}

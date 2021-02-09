@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Icon/Open in New</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.672514,10.672514 L1.33406425,10.672514 L1.33406425,1.33406425 L6.00328913,1.33406425 L6.00328913,0 L1.33406425,0 C0.593658592,0 0,0.600328913 0,1.33406425 L0,10.672514 C0,11.4062494 0.593658592,12.0065783 1.33406425,12.0065783 L10.672514,12.0065783 C11.4062494,12.0065783 12.0065783,11.4062494 12.0065783,10.672514 L12.0065783,6.00328913 L10.672514,6.00328913 L10.672514,10.672514 Z M7.33735338,0 L7.33735338,1.33406425 L9.73199871,1.33406425 L3.17507292,7.89099005 L4.11558822,8.83150535 L10.672514,2.27457955 L10.672514,4.66922488 L12.0065783,4.66922488 L12.0065783,0 L7.33735338,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Extention" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-172.000000, -79.000000)">
+            <g id="Icon/Open-in-New" transform="translate(170.000000, 77.000000)">
+                <g id="ic_open_in_new_black_12px-2" transform="translate(2.001096, 2.001096)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Shape" fill="#AAB2BA" fill-rule="nonzero" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

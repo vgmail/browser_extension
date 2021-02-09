@@ -1,0 +1,23 @@
+iframe#similarsites-outer-content {
+    display: block !important;
+    position: fixed !important;
+    animation-duration: 0.5s !important;
+    animation-timing-function: ease-in-out !important;
+    animation-fill-mode: forwards !important;
+    top: 1% !important;
+    box-shadow: 4px 2px 12px 0 rgba(0, 0, 0, 0.12) !important;
+    width: 525px !important;
+    height: 98% !important;
+    border-radius: 8px !important;
+    border: solid 1px rgba(155, 155, 155, 0.18) !important;
+    transition: 1.0s !important;
+    transition-timing-function: ease-out;
+}
+
+iframe.SS-RTL {
+    left: -525px !important;
+}
+
+iframe.SS-LTR {
+    right: -525px !important;
+}

@@ -1,0 +1,35 @@
+{
+   "appDefaultTitle": {
+      "message": "Convertitore file"
+   },
+   "appDesc": {
+      "message": "Converti file online da un formato all'altro. Compatibilità con più di 2500 conversioni diverse."
+   },
+   "labelArchiveConverter": {
+      "message": "Convertitore archivi"
+   },
+   "labelAudioConverter": {
+      "message": "Convertitore audio"
+   },
+   "labelDocumentConverter": {
+      "message": "Convertitore documenti"
+   },
+   "labelEBookConverter": {
+      "message": "Convertitore ebook"
+   },
+   "labelFontConverter": {
+      "message": "Convertitore di font"
+   },
+   "labelImageConverter": {
+      "message": "Convertitore immagini"
+   },
+   "labelPresentationConverter": {
+      "message": "Convertitore presentazioni"
+   },
+   "labelRecognizeText": {
+      "message": "Rileva il testo"
+   },
+   "labelVideoConverter": {
+      "message": "Convertitore video"
+   }
+}

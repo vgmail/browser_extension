@@ -1,0 +1,35 @@
+{
+   "appDefaultTitle": {
+      "message": "File Converter"
+   },
+   "appDesc": {
+      "message": "Convert files online from one format into another. More than 2500 different conversions supported"
+   },
+   "labelArchiveConverter": {
+      "message": "Archive Converter"
+   },
+   "labelAudioConverter": {
+      "message": "Audio Converter"
+   },
+   "labelDocumentConverter": {
+      "message": "Document Converter"
+   },
+   "labelEBookConverter": {
+      "message": "eBook Converter"
+   },
+   "labelFontConverter": {
+      "message": "Font Converter"
+   },
+   "labelImageConverter": {
+      "message": "Image Converter"
+   },
+   "labelPresentationConverter": {
+      "message": "Presentation Converter"
+   },
+   "labelRecognizeText": {
+      "message": "Recognize Text"
+   },
+   "labelVideoConverter": {
+      "message": "Video Converter"
+   }
+}

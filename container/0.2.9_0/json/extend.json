@@ -1,0 +1,314 @@
+{
+    "app_name": "jzx",
+    "option_date": "20200801",
+    "options_page": "/one/store/manage.html",
+    "feedback_email": "newday_me@163.com",
+    "http_aes_password": "E80Z^fiYXuyWxw$!",
+    "urls": {
+        "doc": "http://go.newday.me/s/one-doc",
+        "privacy": "http://go.newday.me/s/privacy",
+        "upgrade": "http://go.newday.me/s/one-upgrade",
+        "uninstall": "http://go.newday.me/s/one-uninstall"
+    },
+    "apis": {
+        "version": "https://api.newday.me/share/one/version"
+    },
+    "store_cdn_list": [
+        {
+            "cdn_name": "staticfile",
+            "cdn_title": "七牛CDN",
+            "test_file": "https://cdn.staticfile.org/moment.js/2.27.0/locale/zh-cn.min.js"
+        },
+        {
+            "cdn_name": "bootcdn",
+            "cdn_title": "BootCDN",
+            "test_file": "https://cdn.bootcdn.net/ajax/libs/moment.js/2.27.0/locale/zh-cn.min.js"
+        },
+        {
+            "cdn_name": "cloudflare",
+            "cdn_title": "Cloudflare",
+            "test_file": "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/zh-cn.min.js"
+        },
+        {
+            "cdn_name": "cdnjs",
+            "cdn_title": "CdnJS",
+            "test_file": "https://libs.cdnjs.net/moment.js/2.27.0/locale/zh-cn.min.js"
+        }
+    ],
+    "store_auto_install": "no",
+    "store_default_url": "https://api.newday.me/share/store/lists",
+    "store_app_update_interval": 86400,
+    "proxy_nan_interval": 1200,
+    "proxy_min_interval": 300,
+    "proxy_max_interval": 3600,
+    "proxy_default_mode": "mode_rule_url",
+    "proxy_default_auth_url": "http://open.newday.me/share/proxy/auth",
+    "proxy_default_test_url": "http://open.newday.me/share/proxy/test",
+    "proxy_default_settings": {
+        "mode_pac_url": {
+            "mode": "mode_pac_url",
+            "interval": 1200,
+            "pac_url": "http://open.newday.me/share/proxy/pac",
+            "pac_script": ""
+        },
+        "mode_rule_url": {
+            "mode": "mode_rule_url",
+            "interval": 1200,
+            "rule_url": "http://open.newday.me/share/proxy/rule",
+            "rule_list": [],
+            "parse_rule_list": []
+        },
+        "mode_rule_list": {
+            "mode": "mode_rule_list",
+            "interval": 1200,
+            "rule_list": [
+                {
+                    "proxy_url": "http://open.newday.me/share/proxy/main",
+                    "proxy_list": [],
+                    "include_url": "",
+                    "include_list": [
+                        "tensorflow.org"
+                    ],
+                    "exclude_url": "",
+                    "exclude_list": []
+                },
+                {
+                    "proxy_url": "",
+                    "proxy_list": [
+                        {
+                            "no": "no1",
+                            "type": "HTTPS",
+                            "host": "www.proxy.com",
+                            "port": "3128",
+                            "username": "name1",
+                            "password": "password1"
+                        },
+                        {
+                            "no": "no2",
+                            "type": "SOCKS",
+                            "host": "127.0.0.1",
+                            "port": "1080",
+                            "username": "name2",
+                            "password": "password2"
+                        }
+                    ],
+                    "include_url": "",
+                    "include_list": [
+                        "test.com"
+                    ],
+                    "exclude_url": "",
+                    "exclude_list": [
+                        "api.test.com"
+                    ]
+                }
+            ],
+            "parse_rule_list": []
+        }
+    },
+    "proxy_test_url_list": [
+        "https://www.google.com/favicon.ico",
+        "https://scholar.google.com/favicon.ico",
+        "https://translate.google.com/favicon.ico"
+    ],
+    "menu_current_version": "20201212",
+    "menu_default_settings": [
+        {
+            "version": "20200601",
+            "id": "origin-qrcode-content",
+            "status": 1,
+            "type": "qrcode",
+            "title": "生成内容二维码",
+            "contexts": [
+                "selection"
+            ],
+            "payload": {}
+        },
+        {
+            "version": "20200601",
+            "id": "origin-qrcode-link",
+            "status": 1,
+            "type": "qrcode",
+            "title": "生成链接二维码",
+            "contexts": [
+                "page",
+                "link",
+                "audio",
+                "video"
+            ],
+            "payload": {}
+        },
+        {
+            "version": "20201212",
+            "id": "origin-qrcode-scan",
+            "status": 1,
+            "type": "qrcode_scan",
+            "title": "识别二维码",
+            "contexts": [
+                "image"
+            ],
+            "payload": {}
+        },
+        {
+            "version": "20201212",
+            "id": "origin-qrcode-jump",
+            "status": 1,
+            "type": "qrcode_jump",
+            "title": "跳转二维码",
+            "contexts": [
+                "image"
+            ],
+            "payload": {}
+        },
+        {
+            "version": "20200601",
+            "id": "origin-addon-option",
+            "status": 1,
+            "type": "link",
+            "title": "打开插件配置页",
+            "contexts": [
+                "page"
+            ],
+            "payload": {
+                "url": "/one/store/manage.html"
+            }
+        },
+        {
+            "version": "20200601",
+            "id": "origin-tool-cookie",
+            "status": 1,
+            "type": "cookie",
+            "title": "管理网站Cookie",
+            "contexts": [
+                "page",
+                "link",
+                "audio",
+                "video"
+            ],
+            "payload": {}
+        },
+        {
+            "version": "20200601",
+            "id": "origin-link-dalipan",
+            "status": 1,
+            "type": "link",
+            "title": "使用大力盘搜索\"%s\"",
+            "contexts": [
+                "selection"
+            ],
+            "payload": {
+                "url": "https://www.dalipan.com/search?keyword={text}"
+            }
+        },
+        {
+            "version": "20201111",
+            "id": "origin-motrix-down",
+            "status": 0,
+            "type": "aria",
+            "title": "使用Motrix下载",
+            "contexts": [
+                "link",
+                "audio",
+                "video"
+            ],
+            "payload": {
+                "server": "http://localhost:16800/jsonrpc",
+                "token": "",
+                "agent": "",
+                "header": []
+            }
+        },
+        {
+            "version": "20200601",
+            "id": "origin-aria-down",
+            "status": 0,
+            "type": "aria",
+            "title": "使用Aria下载",
+            "contexts": [
+                "link",
+                "audio",
+                "video"
+            ],
+            "payload": {
+                "server": "http://localhost:6800/jsonrpc",
+                "token": "",
+                "agent": "",
+                "header": []
+            }
+        },
+        {
+            "version": "20200601",
+            "id": "origin-aria-manage",
+            "status": 0,
+            "type": "link",
+            "title": "查看Aria下载",
+            "contexts": [
+                "page"
+            ],
+            "payload": {
+                "url": "/one/tool/aria.html"
+            }
+        },
+        {
+            "version": "20200801",
+            "id": "origin-download",
+            "status": 0,
+            "type": "download",
+            "title": "使用浏览器下载",
+            "contexts": [
+                "link",
+                "audio",
+                "video"
+            ],
+            "payload": {
+                "agent": "",
+                "headers": []
+            }
+        },
+        {
+            "version": "20200601",
+            "id": "origin-show-password",
+            "status": 0,
+            "type": "password",
+            "title": "显示明文密码",
+            "contexts": [
+                "page"
+            ],
+            "payload": {}
+        },
+        {
+            "version": "20200601",
+            "id": "origin-google-image",
+            "status": 0,
+            "type": "google_image",
+            "title": "使用谷歌搜索相似图片",
+            "contexts": [
+                "image"
+            ],
+            "payload": {}
+        },
+        {
+            "version": "20200601",
+            "id": "origin-baidu-image",
+            "status": 0,
+            "type": "baidu_image",
+            "title": "使用百度搜索相似图片",
+            "contexts": [
+                "image"
+            ],
+            "payload": {}
+        },
+        {
+            "version": "20200601",
+            "id": "origin-custom-script",
+            "type": "script",
+            "title": "执行自定义JS",
+            "contexts": [
+                "page",
+                "frame"
+            ],
+            "payload": {
+                "script": "alert('Hello World');"
+            }
+        }
+    ]
+}

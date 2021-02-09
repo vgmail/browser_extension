@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>集装箱</title>
+    <!-- Meta -->
+    <meta name="referrer" content="never">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/third/font-awesome/5.13.0/css/all.css">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="/third/toastr.js/2.1.1/toastr.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="/third/overlayscrollbars/1.11.0/OverlayScrollbars.min.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="/third/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/third/admin-lte/3.0.2/adminlte.min.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="/one/assets/iconfont.css">
+    <link rel="stylesheet" href="/one/assets/ui.css">
+    <style type="text/css">
+        .products-list .product-action .app-status {
+            background: #03a9f4;
+        }
+    </style>
+</head>
+
+<body class="hold-transition layout-top-nav layout-navbar-fixed">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <!-- Navbar -->
+        <template id="addon-navbar">
+            <navbar></navbar>
+        </template>
+        <!-- /.navbar -->
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Main content -->
+            <section class="content">
+                <div class="container">
+
+                    <div class="row" id="addon-manage">
+                        <div class="col-md-12">
+
+                            <div class="card" :class="parseCardClass('store-option')">
+                                <div class="card-header">
+                                    <h3 class="card-title">应用设置</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"
+                                            @click="toggleCardOpen('store-option')">
+                                            <i class="fas" :class="parseCardIconClass('store-option')"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body p-0">
+                                    <div class="m-2 alert alert-danger alert-dismissible">
+                                        <button type="button" class="close" data-dismiss="alert"
+                                            aria-hidden="true">&times;</button>
+                                        <h6><i class="icon fas fa-ban"></i> 温馨提醒</h6>
+                                        如果您无法确定商店地址的安全性，请不要对商店地址进行更改，否则造成的一切后果将由用户自己承担。
+                                    </div>
+                                    <table class="table table-middle">
+                                        <tbody>
+                                            <tr>
+                                                <td class="td-switch-title">
+                                                    商店地址
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control form-control-sm"
+                                                        @change="syncStoreUrl()" placeholder="" v-model="store_url">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td-switch-title">
+                                                    自动更新
+                                                </td>
+                                                <td>
+                                                    <div class="icheck-primary d-inline">
+                                                        <input type="checkbox" id="auto_update" v-model="auto_update"
+                                                            @change="syncAutoUpdate()">
+                                                        <label for="auto_update"></label>
+                                                    </div> 启用之后，插件将自动检查并更新应用
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td-switch-title">
+                                                    CDN设置
+                                                </td>
+                                                <td>
+                                                    <p>请选择您当前网络可连通、访问最快的CDN：</p>
+                                                    <template v-for="cdn in cdn_list">
+                                                        <div class="form-group clearfix">
+                                                            <div class="icheck-primary d-inline">
+                                                                <input type="radio" name="cdn_mode"
+                                                                    :value="cdn.cdn_name" v-model="cdn_mode"
+                                                                    :id="'cdn_check_' + cdn.cdn_name"
+                                                                    @change="syncCdnData">
+                                                                <label :for="'cdn_check_' + cdn.cdn_name"></label>
+                                                                <div style="width: 80px; display: inline-block;">
+                                                                    {{cdn.cdn_title}}</div>：
+                                                                <a target="_blank" title="点击访问测试文件"
+                                                                    :href="cdn.test_file">{{cdn.test_file}}</a>
+                                                            </div>
+                                                        </div>
+                                                    </template>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">应用列表</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body p-0">
+                                    <ul class="products-list product-list-in-card pl-2 pr-2">
+                                        <template v-for="app in app_list">
+                                            <li class="item">
+                                                <div class="product-img">
+                                                    <img :src="app.app_cover">
+                                                </div>
+                                                <div class="product-info">
+                                                    <a target="_blank" :href="app.app_url" class="product-title">
+                                                        {{app.app_title}}
+                                                    </a>
+                                                    <span class="float-right product-action pt-3 mr-2">
+                                                        <template v-if="app.install_version">
+                                                            <button
+                                                                class="btn btn-sm icheck-clouds m-0 app-status text-white"
+                                                                title="状态">
+                                                                <input type="checkbox" :value="app.app_name"
+                                                                    :id="'app_status_' + app.app_name"
+                                                                    v-model="app_option" @click="setAppStatus(app)">
+                                                                <label :for="'app_status_' + app.app_name"> 状态</label>
+                                                            </button>
+                                                            <button type="submit" class="btn btn-sm btn-info" title="配置"
+                                                                v-if="app.option_url" @click="optionApp(app)">
+                                                                <i class="fas fa-cog mr-1"></i> 配置
+                                                            </button>
+                                                            <template v-if="app.need_update">
+                                                                <button type="submit"
+                                                                    class="btn btn-sm btn-warning text-danger"
+                                                                    title="更新" @click="upgradeApp(app)">
+                                                                    <i class="fas fa-sync mr-1"></i> 更新
+                                                                </button>
+                                                            </template>
+                                                            <template v-else>
+                                                                <button type="submit"
+                                                                    class="btn btn-sm btn-warning text-white" title="重装"
+                                                                    @click="installApp(app)">
+                                                                    <i class="fas fa-undo mr-1"></i> 重装
+                                                                </button>
+                                                            </template>
+                                                            <button type="submit" class="btn btn-sm btn-danger"
+                                                                title="卸载" @click="uninstallApp(app)">
+                                                                <i class="fas fa-trash mr-1"></i> 卸载
+                                                            </button>
+                                                        </template>
+                                                        <template v-else>
+                                                            <button type="submit" class="btn btn-sm btn-success"
+                                                                title="安装" @click="installApp(app)">
+                                                                <i class="fas fa-download mr-1"></i> 安装
+                                                            </button>
+                                                        </template>
+                                                    </span>
+                                                    <span class="product-description">
+                                                        {{app.app_info}}
+                                                    </span>
+                                                    <span class="product-description">
+                                                        <span>商店版本：{{app.app_version}}</span>
+                                                        <template v-if="app.install_version">
+                                                            <span>，安装版本：{{app.install_version}}，最后更改：{{app.update_date}}</span>
+                                                        </template>
+                                                        <template v-else>
+                                                            <span>，安装版本：...</span>
+                                                        </template>
+                                                        <span class="text-danger"
+                                                            v-if="app.app_error">（{{app.app_msg}}）</span>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <template id="addon-login-modal">
+        <login-modal></login-modal>
+    </template>
+
+    <template id="addon-setting-modal">
+        <setting-modal></setting-modal>
+    </template>
+
+    <!-- jQuery -->
+    <script src="/third/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Vue -->
+    <script src="/third/vue/1.0.28/vue-csp.min.js"></script>
+    <!-- Toastr -->
+    <script src="/third/toastr.js/2.1.1/toastr.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="/third/overlayscrollbars/1.11.0/OverlayScrollbars.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/third/twitter-bootstrap/4.4.1/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/third/admin-lte/3.0.2/adminlte.min.js"></script>
+    <!-- Custom Script -->
+    <script src="/js/bridge.js"></script>
+    <script src="/one/assets/ui.js"></script>
+    <script src="/one/store/manage.js"></script>
+</body>
+
+</html>

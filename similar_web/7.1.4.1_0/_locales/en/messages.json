@@ -1,0 +1,274 @@
+{
+   "Go_To_SimilarSites": {
+      "description": "Go to similarsites button on error/no info page",
+      "message": "Go to SimilarSites.com"
+   },
+   "NoSimilarSites": {
+      "description": "No similarsites found text",
+      "message": "No Similar Sites found for"
+   },
+   "SimilarSites": {
+      "description": "Similar sites area title",
+      "message": "Similar Sites"
+   },
+   "SimilarSitesOneWord": {
+      "message": "SimilarSites"
+   },
+   "ViewMoreSimilarSites": {
+      "description": "View More Similar Sites button in the end of the similar sites",
+      "message": "SHOW MORE ON SIMILARSITES"
+   },
+   "appDesc": {
+      "description": "Instant access to the best sites related to the one you are browsing!\r\nSimilar Sites is our advanced extension to discover new websites that are similar to the ones you browse.\r\nThis extension will help you finding out instantly a list of alternative websites that are related and relevant to the ones you visit. A great companion tool to help you explore the internet for fresh ideas and discover new leads.\r\n See the Top 10 Similar Sites to any website.\r\n Thumbnail Image preview for Similar Sites results. \r\n\r\nThere will be much more extras to come soon, just bear with us :) \r\n\r\nYou can get more information about our technology and to understand how SimilarSites choose his recommendation on our website: http://www.SimilarSites.com\r\n\r\n\tGet the top 10 Similar Sites to any website !\r\n\tThumbnail Image preview for any results \r\n\r\nFeatured:\r\n Featured on FireFox Mozilla Marketplace ! \r\n (NEW) Advanced Similar Product Feature  - That will give you product recommendation on leading shopping websites\r\n Our Search widget - Get Similar Sites with one click, on search result for quick access to find more nice website on leading search engine like google and bing\r\n\r\n\r\n------------------------------------------------------------------------------------------------------------------------------------\r\n\r\nNote: When you click the Similar Sites button, your browser will send a search query to our servers to see if there are any similar sites for the websites you are viewing.\r\nIn order to continuously improve our technology of websites analysis, we collect certain data such of browsing history/trend statistics and how our features are being used. Details may be found in our privacy policy.\r\n-----------------------------------------------------------------------------------------------------------------------------------\r\nBy installing this extension, you agree to the Terms of Service and to our Privacy Policy at : http://www.similarsites.com/privacy-policy.aspx",
+      "message": "Instantly find websites similar to the one you’re currently browsing. Explore the web, discover more."
+   },
+   "appName": {
+      "description": "Similar Sites",
+      "message": "Similar Sites - Discover Related Websites"
+   },
+   "categoryRankMain": {
+      "message": "Category Rank"
+   },
+   "category_rank": {
+      "message": "Category Rank"
+   },
+   "connect": {
+      "message": "CONNECT"
+   },
+   "countryRankMain": {
+      "message": "Country Rank"
+   },
+   "country_rank": {
+      "message": "Country Rank"
+   },
+   "errorViewBody1": {
+      "message": "We currently lack sufficient data to show complete estimations for this website."
+   },
+   "errorViewBody2": {
+      "message": "Rest assured, we are working tirelessly to provide the world with the most reliable data about every website and every app."
+   },
+   "errorViewBody3": {
+      "message": "If you are the owner of this site, you can connect your site's Google Analytics, to present your data on SimilarWeb."
+   },
+   "errorViewTitle": {
+      "message": "We're sorry but..."
+   },
+   "error_text": {
+      "description": "error page message",
+      "message": "We are having some trouble getting the data for you right now, please try again later."
+   },
+   "getSimilarSite": {
+      "message": "View Similar Sites"
+   },
+   "globalRankMain": {
+      "description": "Main site's Global Rank",
+      "message": "Global Rank"
+   },
+   "globalRankSS": {
+      "description": "Similar site's Global Rank",
+      "message": "Global Rank"
+   },
+   "high_stars_buttonText": {
+      "description": "Rate us high stars cta",
+      "message": "Rate us on the $BROWSER$ Web Store",
+      "placeholders": {
+         "browser": {
+            "content": "$1"
+         }
+      }
+   },
+   "high_stars_subtitle": {
+      "description": "Rate us high stars subtitle",
+      "message": "Please take a moment to rate us on the $BROWSER$ Web Store",
+      "placeholders": {
+         "browser": {
+            "content": "$1"
+         }
+      }
+   },
+   "high_stars_title": {
+      "description": "Rate us thanks for rating high stars",
+      "message": "Thanks for rating"
+   },
+   "invalid_popup_button": {
+      "message": "GOT IT"
+   },
+   "invalid_popup_subtitle": {
+      "message": "This website is not supported. Please enter a website in the address bar so that we can provide you with relevant data."
+   },
+   "invalid_popup_title": {
+      "message": "Enter a Website"
+   },
+   "low_stars_buttonText": {
+      "description": "Rate us low stars cta take a quick survey",
+      "message": "Take a Quick Survey"
+   },
+   "low_stars_subtitle": {
+      "description": "Rate us low stars subtitle",
+      "message": "Please take a moment to help us improve SimilarSites Extension"
+   },
+   "low_stars_title": {
+      "description": "Rate us low stars title",
+      "message": "Help us improve"
+   },
+   "menu_item_feedback": {
+      "message": "Feedback"
+   },
+   "menu_item_rate": {
+      "message": "Rate Us"
+   },
+   "menu_item_share": {
+      "message": "Share"
+   },
+   "monthlyVisitsMain": {
+      "description": "Main site's Monthly Visits",
+      "message": "Monthly Visits"
+   },
+   "monthlyVisitsSS": {
+      "description": "Similar site's Monthly Visits",
+      "message": "Monthly Visits"
+   },
+   "monthly_visits": {
+      "message": "Monthly Visits"
+   },
+   "no": {
+      "message": "No"
+   },
+   "noDataViewTitle": {
+      "message": "We couldn't find any similar sites for this domain."
+   },
+   "noDescriptionMsg1": {
+      "message": "Sorry."
+   },
+   "noDescriptionMsg2": {
+      "message": "Description is not currently available"
+   },
+   "no_info_text1": {
+      "description": "no info page message part one",
+      "message": "We can't find information about"
+   },
+   "no_info_text2": {
+      "description": "no info page message part two",
+      "message": "please try again later"
+   },
+   "onboarding_final_step_button": {
+      "message": "GET STARTED"
+   },
+   "onboarding_next_step_button": {
+      "message": "NEXT"
+   },
+   "onboarding_skip_button": {
+      "message": "SKIP"
+   },
+   "onboarding_subtitle_step_1": {
+      "message": "Discover new websites that are similar to the one you’re currently browsing."
+   },
+   "onboarding_subtitle_step_2": {
+      "message": "SimilarSites provides you with website recommendations and more options for sites to browse and enjoy."
+   },
+   "onboarding_subtitle_step_3": {
+      "message": "Whether you want to explore sites for entertainment or grow your business, we’ve got you covered!"
+   },
+   "onboarding_title_step_1": {
+      "message": "Welcome to SimilarSites"
+   },
+   "onboarding_title_step_2": {
+      "message": "More Options to Enjoy"
+   },
+   "onboarding_title_step_3": {
+      "message": "Business and Pleasure"
+   },
+   "opt_in": {
+      "message": "Opt back in to sharing data"
+   },
+   "opt_out": {
+      "message": "Opt out from sharing data"
+   },
+   "opted_out_message_icon": {
+      "message": "To gain more information on the go, click the extension’s favicon and join the SimilarSites panel"
+   },
+   "optout_button": {
+      "description": "Opt out view opt in back button",
+      "message": "Opt-in to see similar sites"
+   },
+   "optout_subtitle": {
+      "description": "Opt out view subtitle",
+      "message": "You chose to opt out from sharing data, which we need to be able to show you similar sites."
+   },
+   "optout_title": {
+      "description": "Opt out view title",
+      "message": "Unable to locate results for "
+   },
+   "popularRankMain": {
+      "message": "Popular Rank"
+   },
+   "privacy_got_it": {
+      "description": "gdpr privacy got it cta",
+      "message": "Got it"
+   },
+   "privacy_learn_more": {
+      "description": "gdpr privacy learn more",
+      "message": "Learn more."
+   },
+   "privacy_subtitle": {
+      "description": "gdpr privacy subtitle",
+      "message": "SimilarSites has a new Privacy Policy, effective May 25, 2018. "
+   },
+   "privacy_title": {
+      "description": "gdpr privacy title",
+      "message": "Important update"
+   },
+   "rank": {
+      "message": "Rank"
+   },
+   "rateUs": {
+      "description": "Rate us in the footer area",
+      "message": "Rate us"
+   },
+   "rate_modal_button": {
+      "message": "RATE"
+   },
+   "rate_modal_title": {
+      "message": "Show Us Some Love!"
+   },
+   "share_modal_link_copied": {
+      "message": "Copied"
+   },
+   "share_modal_title": {
+      "message": "Share SimilarSites"
+   },
+   "show_less": {
+      "message": "Show less"
+   },
+   "show_more": {
+      "message": "Show more"
+   },
+   "similar_question": {
+      "message": "Similar?"
+   },
+   "siteTopicsMain": {
+      "description": "Main site's Site Topics",
+      "message": "Site Topics"
+   },
+   "sort": {
+      "message": "SORT"
+   },
+   "sort_section_similar_sites": {
+      "message": "Similar sites to "
+   },
+   "topSS": {
+      "message": "Top Similar Sites"
+   },
+   "uncategorized": {
+      "message": "Uncategorized"
+   },
+   "view_more": {
+      "message": "View More"
+   },
+   "worldwide": {
+      "message": "Worldwide"
+   },
+   "yes": {
+      "message": "Yes"
+   }
+}

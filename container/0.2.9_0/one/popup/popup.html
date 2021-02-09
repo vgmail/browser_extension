@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>集装箱</title>
+    <!-- Meta -->
+    <meta name="referrer" content="never">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/third/font-awesome/5.13.0/css/all.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="/third/overlayscrollbars/1.11.0/OverlayScrollbars.min.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="/third/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/third/admin-lte/3.0.2/adminlte.min.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="/one/assets/ui.css">
+    <link rel="stylesheet" href="/one/assets/iconfont.css">
+    <link rel="stylesheet" href="/one/popup/popup.css">
+</head>
+
+<body class="layout-top-nav layout-navbar-fixed layout-footer-fixed">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand-md navbar-dark navbar-primary" id="addon-navbar">
+            <div class="container">
+                <!-- navbar logo -->
+                <div class="navbar-brand">
+                    <span class="brand-text text-white">集装箱</span>
+                </div>
+
+                <!-- navbar links -->
+                <ul class="navbar-nav navbar-no-expand">
+                    <template v-for="menu in menu_list">
+                        <template v-if="menu.sub_list">
+                            <li class="nav-item dropdown">
+                                <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    class="nav-link dropdown-toggle" :id="menu.menu_id" :title="menu.menu_full_title">
+                                    <i :class="menu.menu_class"></i>
+                                </a>
+                                <ul :aria-labelledby="menu.menu_id" class="dropdown-menu border-0 shadow">
+                                    <template v-for="sub_menu in menu.sub_list">
+                                        <li>
+                                            <a class="dropdown-item" :href="sub_menu.menu_link" target="_blank"
+                                                :id="sub_menu.menu_id" :title="sub_menu.menu_full_title">
+                                                <i :class="sub_menu.menu_class"></i>
+                                            </a>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </li>
+                        </template>
+                        <template v-else>
+                            <li class="nav-item">
+                                <a class="nav-link" :href="menu.menu_link" target="_blank" :id="menu.menu_id"
+                                    :title="menu.menu_full_title">
+                                    <i :class="menu.menu_class"></i>
+                                </a>
+                            </li>
+                        </template>
+                    </template>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://go.newday.me/s/one-home" target="_blank" title="插件主页">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+
+            <!-- Main content -->
+            <div class="content">
+                <div class="container">
+
+                    <div class="row" id="addon-manage">
+                        <div class="col-md-12">
+
+                            <div class="card" :class="parseCardClass('popup-setting')">
+                                <div class="card-header">
+                                    <h3 class="card-title">快捷设置</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"
+                                            @click="toggleCardOpen('popup-setting')">
+                                            <i class="fas" :class="parseCardIconClass('popup-setting')"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body p-0">
+                                    <table class="table table-middle">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="icheck-primary">
+                                                        <input type="checkbox" id="proxy_status" v-model="proxy_status"
+                                                            @change="syncProxyStatus()">
+                                                        <label for="proxy_status"></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    启用之后，插件将试图接管浏览器代理
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="icheck-primary">
+                                                        <input type="checkbox" id="auto_update" v-model="auto_update"
+                                                            @change="syncAutoUpdate()">
+                                                        <label for="auto_update"></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    启用之后，插件将自动检查并更新应用
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+
+                            <div class="card mb-1" :class="parseCardClass('popup-store')">
+                                <div class="card-header">
+                                    <h3 class="card-title">应用列表</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"
+                                            @click="toggleCardOpen('popup-store')">
+                                            <i class="fas" :class="parseCardIconClass('popup-store')"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <ul class="products-list product-list-in-card"
+                                        style="border-top: 1px solid rgba(0,0,0,.125);">
+                                        <template v-for="app in app_list">
+                                            <li class="item">
+                                                <div class="product-img">
+                                                    <img :src="app.app_cover">
+                                                </div>
+                                                <div class="product-info">
+                                                    <a target="_blank" :href="app.app_url" class="product-title">
+                                                        {{app.app_title}}
+                                                    </a>
+                                                    <span class="product-action float-right ml-2">
+                                                        <template v-if="app.install_version">
+                                                            <button class="btn btn-sm icheck-clouds m-0 app-status"
+                                                                title="状态">
+                                                                <input type="checkbox" :value="app.app_name"
+                                                                    :id="'app_status_' + app.app_name"
+                                                                    v-model="app_option" @click="setAppStatus(app)">
+                                                                <label :for="'app_status_' + app.app_name"></label>
+                                                            </button>
+                                                            <button type="submit" class="btn btn-sm btn-info"
+                                                                v-if="app.option_url" @click="optionApp(app)"
+                                                                title="配置">
+                                                                <i class="fas fa-cog"></i>
+                                                            </button>
+                                                            <template v-if="app.need_update">
+                                                                <button type="submit"
+                                                                    class="btn btn-sm btn-warning text-danger"
+                                                                    @click="upgradeApp(app)" title="升级">
+                                                                    <i class="fas fa-sync"></i>
+                                                                </button>
+                                                            </template>
+                                                            <template v-else>
+                                                                <button type="submit"
+                                                                    class="btn btn-sm btn-warning text-white"
+                                                                    @click="installApp(app)" title="重装">
+                                                                    <i class="fas fa-undo"></i>
+                                                                </button>
+                                                            </template>
+                                                            <button type="submit" class="btn btn-sm btn-danger"
+                                                                @click="uninstallApp(app)" title="卸载">
+                                                                <i class="fas fa-trash"></i>
+                                                            </button>
+                                                        </template>
+                                                        <template v-else>
+                                                            <button type="submit" class="btn btn-sm btn-success"
+                                                                @click="installApp(app)" title="安装">
+                                                                <i class="fas fa-download"></i>
+                                                            </button>
+                                                        </template>
+                                                    </span>
+                                                    <span class="product-description">
+                                                        {{app.app_info}}
+                                                    </span>
+                                                    <span class="product-description">
+                                                        商店版本：{{app.app_version}}
+                                                        <template v-if="app.install_version">
+                                                            <span>，安装版本：{{app.install_version}}</span>
+                                                        </template>
+                                                        <template v-else>
+                                                            <span>，安装版本：...</span>
+                                                        </template>
+                                                        <a class="text-danger" v-if="app.app_error"
+                                                            @click="showAppError(app)" :title="app.app_msg">（错误）</span>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="modal-default">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <p class="modal-title">提示</p>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                    </div>
+                    <!-- /.modal -->
+
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Footer -->
+        <footer class="main-footer" id="addon-updater">
+            <div class="float-left">
+                <span>当前版本：</span><b>{{updater.version_current}}</b>
+            </div>
+            <div class="float-right">
+                <template v-if="updater.need_update">
+                    <b>
+                        <a class="text-danger" target="_blank" title="点击去升级" :href="updater.upgrade_url">
+                            有新版本 {{updater.version_latest}}
+                        </a>
+                    </b>
+                </template>
+                <template v-else>
+                    已经是最新版本
+                </template>
+            </div>
+        </footer>
+        <!-- /.main-footer -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="/third/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Vue -->
+    <script src="/third/vue/1.0.28/vue-csp.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="/third/overlayscrollbars/1.11.0/OverlayScrollbars.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/third/twitter-bootstrap/4.4.1/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/third/admin-lte/3.0.2/adminlte.min.js"></script>
+    <!-- Custom Script -->
+    <script src="/js/bridge.js"></script>
+    <script src="/one/assets/ui.js"></script>
+    <script src="/one/popup/popup.js"></script>
+</body>
+
+</html>

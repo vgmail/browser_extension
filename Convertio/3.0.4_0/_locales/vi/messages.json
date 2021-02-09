@@ -1,0 +1,35 @@
+{
+   "appDefaultTitle": {
+      "message": "Chuyển đổi tập tin"
+   },
+   "appDesc": {
+      "message": "Chuyển đổi tập tin trực tuyến từ định dạng này sang định dạng khác. Hỗ trợ hơn 2.500 chuyển đổi khác nhau."
+   },
+   "labelArchiveConverter": {
+      "message": "Trình chuyển đổi Tập tin nén"
+   },
+   "labelAudioConverter": {
+      "message": "Trình chuyển đổi Âm thanh"
+   },
+   "labelDocumentConverter": {
+      "message": "Trình chuyển đổi Tài liệu"
+   },
+   "labelEBookConverter": {
+      "message": "Trình chuyển đổi Ebook"
+   },
+   "labelFontConverter": {
+      "message": "Chuyển đổi Phông chữ"
+   },
+   "labelImageConverter": {
+      "message": "Trình chuyển đổi Hình ảnh"
+   },
+   "labelPresentationConverter": {
+      "message": "Trình chuyển đổi Tập tin Trình chiếu"
+   },
+   "labelRecognizeText": {
+      "message": "Nhận dạng Văn bản"
+   },
+   "labelVideoConverter": {
+      "message": "Trình chuyển đổi Video"
+   }
+}

@@ -1,0 +1,176 @@
+html {
+    overflow-x: hidden;
+    background: #f4f6f9;
+}
+
+body {
+    background: #f4f6f9;
+}
+
+a {
+    cursor: pointer;
+}
+
+.content .container {
+    padding-top: 1.8rem;
+    padding-bottom: 1rem;
+}
+
+.brand-image .fas {
+    font-size: 1.5rem;
+    margin-left: 0.3rem;
+    line-height: 2.4rem;
+}
+
+.navbar-no-expand .nav-link {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+.card {
+    margin-bottom: 1.8rem;
+}
+
+/**************************/
+
+.table-middle th {
+    text-align: center;
+}
+
+.table-middle td {
+    vertical-align: middle;
+}
+
+.td-switch-input {
+    width: 60px;
+}
+
+.td-switch-title {
+    width: 100px;
+    font-weight: 600;
+}
+
+.td-middle {
+    vertical-align: middle !important;
+}
+
+.td-inline-input {
+    width: 160px;
+    display: inline-block;
+}
+
+.td-inline-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/**************************/
+
+.btn-file {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+/**************************/
+
+.products-list .product-info {
+    margin-left: 80px;
+}
+
+.products-list .product-img {
+    padding: 5px;
+}
+
+.products-list .product-img img {
+    width: 60px;
+    height: 60px;
+}
+
+/**************************/
+
+.ekko-lightbox .modal-title {
+    font-size: 1rem;
+}
+
+/**************************/
+
+.CodeMirror {
+    height: 350px;
+}
+
+.editor-area {
+    height: 350px !important;
+}
+
+/**************************/
+
+.json-area .card-title {
+    margin-top: 10px;
+    float: none;
+}
+
+.json-area .card-body {
+    margin-top: 10px;
+}
+
+.json-area .form-control {
+    margin-top: 10px;
+}
+
+.json-area .row {
+    margin-top: 15px;
+}
+
+.json-area label {
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.json-area .btn-group .btn {
+    margin-top: 12px;
+}
+
+/**************************/
+
+.vue-delay-show {
+    display: none;
+}
+
+.vue-delay-hide {
+    display: inline-block;
+}
+
+.vue-loaded .vue-delay-show {
+    display: inline-block;
+}
+
+.vue-loaded .vue-delay-hide {
+    display: none;
+}
+
+/**************************/
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #cdcdcd;
+}
+
+:root {
+    scrollbar-width: thin;
+}

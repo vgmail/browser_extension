@@ -1,0 +1,35 @@
+{
+   "appDefaultTitle": {
+      "message": "แปลงไฟล์"
+   },
+   "appDesc": {
+      "message": "แปลงไฟล์ออนไลน์จากฟอร์แมตหนึ่งเป็นฟอร์แมตอื่น ๆ. รองรับการแปลงไฟล์มากกว่า 2500 รูปแบบ"
+   },
+   "labelArchiveConverter": {
+      "message": "ตัวแปลงไฟล์เก็บถาวร"
+   },
+   "labelAudioConverter": {
+      "message": "ตัวแปลงไฟล์เสียง"
+   },
+   "labelDocumentConverter": {
+      "message": "ตัวแปลงเอกสาร"
+   },
+   "labelEBookConverter": {
+      "message": "ตัวแปลง Ebook"
+   },
+   "labelFontConverter": {
+      "message": "ตัวแปลงฟอนต์"
+   },
+   "labelImageConverter": {
+      "message": "ตัวแปลงรูปภาพ"
+   },
+   "labelPresentationConverter": {
+      "message": "ตัวแปลงงานนำเสนอ"
+   },
+   "labelRecognizeText": {
+      "message": "รู้จักข้อความ"
+   },
+   "labelVideoConverter": {
+      "message": "ตัวแปลงวิดีโอ"
+   }
+}

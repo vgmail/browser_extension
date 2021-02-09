@@ -1,0 +1,35 @@
+{
+   "appDefaultTitle": {
+      "message": "文件转换器"
+   },
+   "appDesc": {
+      "message": "在线将文件从一种格式转换为另一种格式. 支持超过 2500 种不同的转换。"
+   },
+   "labelArchiveConverter": {
+      "message": "归档转换器"
+   },
+   "labelAudioConverter": {
+      "message": "音频转换器"
+   },
+   "labelDocumentConverter": {
+      "message": "文档转换器"
+   },
+   "labelEBookConverter": {
+      "message": "电子书转换器"
+   },
+   "labelFontConverter": {
+      "message": "字体转换器"
+   },
+   "labelImageConverter": {
+      "message": "图片转换器"
+   },
+   "labelPresentationConverter": {
+      "message": "演示文稿转换器"
+   },
+   "labelRecognizeText": {
+      "message": "识别文本"
+   },
+   "labelVideoConverter": {
+      "message": "视频转换器"
+   }
+}

@@ -1,0 +1,35 @@
+{
+   "appDefaultTitle": {
+      "message": "محول الملفات"
+   },
+   "appDesc": {
+      "message": "قُم بتحويل صيغ الملفات عبر الإنترنت من واحدة إلى أُخرى. يدعم أكثر من 2500 عملية تحويل مختلفة."
+   },
+   "labelArchiveConverter": {
+      "message": "محول الأرشيفات"
+   },
+   "labelAudioConverter": {
+      "message": "محول الصوت"
+   },
+   "labelDocumentConverter": {
+      "message": "محول المستندات"
+   },
+   "labelEBookConverter": {
+      "message": "محول الكتب الإلكترونية"
+   },
+   "labelFontConverter": {
+      "message": "محوّل الخطوط"
+   },
+   "labelImageConverter": {
+      "message": "محول الصول"
+   },
+   "labelPresentationConverter": {
+      "message": "محول العروض التقديمية"
+   },
+   "labelRecognizeText": {
+      "message": "التعرّف على النص"
+   },
+   "labelVideoConverter": {
+      "message": "محول الفيديو"
+   }
+}

@@ -1,0 +1,35 @@
+{
+   "appDefaultTitle": {
+      "message": "Конвертер файлов"
+   },
+   "appDesc": {
+      "message": "Конвертирование файлов онлайн из одного формата в другой. Поддерживается более 2500 различных преобразований."
+   },
+   "labelArchiveConverter": {
+      "message": "Конвертер архивов"
+   },
+   "labelAudioConverter": {
+      "message": "Конвертер аудио"
+   },
+   "labelDocumentConverter": {
+      "message": "Конвертер документов"
+   },
+   "labelEBookConverter": {
+      "message": "Конвертер электронных книг"
+   },
+   "labelFontConverter": {
+      "message": "Конвертер шрифтов"
+   },
+   "labelImageConverter": {
+      "message": "Конвертер изображений"
+   },
+   "labelPresentationConverter": {
+      "message": "Конвертер презентаций"
+   },
+   "labelRecognizeText": {
+      "message": "Распознавание текста"
+   },
+   "labelVideoConverter": {
+      "message": "Конвертер видео"
+   }
+}
